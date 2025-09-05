@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ההמלצות של עדי ובן לקופנגן</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&display=swap');
+        body {
+            font-family: 'Heebo', sans-serif;
+            background-color: #f7f3e9;
+        }
+        .section-header {
+            border-bottom: 2px solid #a8a092;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #4b3f2f;
+        }
+        .place-item {
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            background-color: #fff;
+        }
+        .place-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <!-- Main Container -->
+    <div class="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl p-6 md:p-10 border-4 border-gray-200">
+        
+        <header class="text-center mb-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-indigo-800 mb-2 drop-shadow-md">ההמלצות של עדי ובן לקופנגן</h1>
+            <p class="text-lg md:text-xl text-gray-600">רק המלצות שנהנינו מהם. חפשו את המקומות שכתבנו ״לא לפספס״</p>
+        </header>
+
+        <!-- Places Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <!-- Category: Coffee and breakfast -->
+            <div class="col-span-full">
+                <h2 class="section-header">קפה וארוחות בוקר</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div id="balance" class="place-item p-4 rounded-xl shadow-md border border-gray-100 flex items-center space-x-2 space-x-reverse" onclick="showModal('balance')">
+                        <span class="text-2xl">☕</span>
+                        <span class="text-lg text-gray-800 font-semibold">Balance</span>
+                    </div>
+                    <div id="bubbas-roastery" class="place-item p-4 rounded-xl shadow-md border border-gray-100 flex items-center space-x-2 space-x-reverse" onclick="showModal('bubbas-roastery')">
+                        <span class="text-2xl">☕</span>
+                        <span class="text-lg text-gray-800 font-semibold">Bubba’s Roastery</span>
+                    </div>
+                    <div id="bubbas-ban-tai" class="place-item p-4 rounded-xl shadow-md border border-gray-100 flex items-center space-x-2 space-x-reverse" onclick="showModal('bubbas-ban-tai')">
+                        <span class="text-2xl">☕</span>
+                        <span class="text-lg text-gray-800 font-semibold">Bubba’s Ban tai</span>
+                    </div>
+                    <div id="whats-cup" class="place-item p-4 rounded-xl shadow-md border border-gray-100 flex items-center space-x-2 space-x-reverse" onclick="showModal('whats-cup')">
+                        <span class="text-2xl">☕</span>
+                        <span class="text-lg text-gray-800 font-semibold">What’s cup</span>
+                    </div>
+                    <div id="loyfa-organic-farm" class="place-item p-4 rounded-xl shadow-md border border-gray-100 flex items-center space-x-2 space-x-reverse" onclick="showModal('loyfa-organic-farm')">
+                        <span class="text-2xl">🌱</span>
+                        <span class="text-lg text-gray-800 font-semibold">Loyfa organic farm</span>
+                    </div>
+                    <div id="kaif" class="place-item p-4 rounded-xl shadow-md border border-gray-100 flex items-center space-x-2 space-x-reverse" onclick="showModal('kaif')">
+                        <span class="text-2xl">☕</span>
+                        <span class="text-lg text-gray-800 font-semibold">Kaif</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category: Restaurant and pool club -->
+            <div class="col-span-full mt-8">
+                <h2 class="section-header">מסעדות ומועדוני בריכה</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div id="seatara" class="place-item p-4 rounded-xl shadow-md border border-gray-100 flex items-center space-x-2 space-x-reverse" onclick="showModal('seatara')">
+                        <span class="text-2xl">🍽️</span>
+                        <span class="text-lg text-gray-800 font-semibold">Seatara</span>
+                    </div>
+                    <div id="tomorrow-x" class="place-item p-4 rounded-xl shadow-md border border-gray-100 flex items-center space-x-2 space-x-reverse" onclick="showModal('tomorrow-x')">
+                        <span class="text-2xl">🍹</span>
+                        <span class="text-lg text-gray-800 font-semibold">Tomorrow x</span>
+                    </div>
+                    <div id="common-ground" class="place-item p-4 rounded-xl shadow-md border border-gray-100 flex items-center space-x-2 space-x-reverse" onclick="showModal('common-ground')">
+                        <span class="text-2xl">🍹</span>
+                        <span class="text-lg text-gray-800 font-semibold">Common ground</span>
+                    </div>
+                    <div id="palita-lodge" class="place-item p-4 rounded-xl shadow-md border border-gray-100 flex items-center space-x-2 space-x-reverse" onclick="showModal('palita-lodge')">
+                        <span class="text-2xl">🍹</span>
+                        <span class="text-lg text-gray-800 font-semibold">Palita lodge</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category: Night markets -->
+            <div class="col-span-full mt-8">
+                <h2 class="section-header">שווקי לילה</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div id="sunday-night-market" class="place-item p-4 rounded-xl shadow-md border border-gray-100 flex items-center space-x-2 space-x-reverse" onclick="showModal('sunday-night-market')">
+                        <span class="text-2xl">🛍️</span>
+                        <span class="text-lg text-gray-800 font-semibold">Sunday night market Chulukloum</span>
+                    </div>
+                    <div id="mamas-market" class="place-item p-4 rounded-xl shadow-md border border-gray-100 flex items-center space-x-2 space-x-reverse" onclick="showModal('mamas-market')">
+                        <span class="text-2xl">🛍️</span>
+                        <span class="text-lg text-gray-800 font-semibold">Mama’s market</span>
+                    </div>
+                    <div id="pantip-market" class="place-item p-4 rounded-xl shadow-md border border-gray-100 flex items-center space-x-2 space-x-reverse" onclick="showModal('pantip-market')">
+                        <span class="text-2xl">🛍️</span>
+                        <span class="text-lg text-gray-800 font-semibold">Pantip market</span>
+                    </div>
+                    <div id="saturday-night-market" class="place-item p-4 rounded-xl shadow-md border border-gray-100 flex items-center space-x-2 space-x-reverse" onclick="showModal('saturday-night-market')">
+                        <span class="text-2xl">🛍️</span>
+                        <span class="text-lg text-gray-800 font-semibold">Saturday night market</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category: Restaurants -->
+            <div class="col-span-full mt-8">
+                <h2 class="section-header">מסעדות</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div id="lost-and-found" class="place-item p-4 rounded-xl shadow-md border border-gray-100 flex items-center space-x-2 space-x-reverse" onclick="showModal('lost-and-found')">
+                        <span class="text-2xl">🍽️</span>
+                        <span class="text-lg text-gray-800 font-semibold">Lost and found</span>
+                    </div>
+                    <div id="grilled-fish" class="place-item p-4 rounded-xl shadow-md border border-gray-100 flex items-center space-x-2 space-x-reverse" onclick="showModal('grilled-fish')">
+                        <span class="text-2xl">🐟</span>
+                        <span class="text-lg text-gray-800 font-semibold">Grilled fish Miang</span>
+                    </div>
+                    <div id="plaas-restaurant" class="place-item p-4 rounded-xl shadow-md border border-gray-100 flex items-center space-x-2 space-x-reverse" onclick="showModal('plaas-restaurant')">
+                        <span class="text-2xl">🍽️</span>
+                        <span class="text-lg text-gray-800 font-semibold">Plaa’s restaurant</span>
+                    </div>
+                    <div id="pum-pui" class="place-item p-4 rounded-xl shadow-md border border-gray-100 flex items-center space-x-2 space-x-reverse" onclick="showModal('pum-pui')">
+                        <span class="text-2xl">🍜</span>
+                        <span class="text-lg text-gray-800 font-semibold">Pum pui</span>
+                    </div>
+                    <div id="umami-restaurant" class="place-item p-4 rounded-xl shadow-md border border-gray-100 flex items-center space-x-2 space-x-reverse" onclick="showModal('umami-restaurant')">
+                        <span class="text-2xl">🍣</span>
+                        <span class="text-lg text-gray-800 font-semibold">Umami restaurant</span>
+                    </div>
+                    <div id="coco-loco" class="place-item p-4 rounded-xl shadow-md border border-gray-100 flex items-center space-x-2 space-x-reverse" onclick="showModal('coco-loco')">
+                        <span class="text-2xl">🍹</span>
+                        <span class="text-lg text-gray-800 font-semibold">Coco loco</span>
+                    </div>
+                    <div id="cucina-italiana" class="place-item p-4 rounded-xl shadow-md border border-gray-100 flex items-center space-x-2 space-x-reverse" onclick="showModal('cucina-italiana')">
+                        <span class="text-2xl">🍕</span>
+                        <span class="text-lg text-gray-800 font-semibold">Cucina Italiana</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category: Places -->
+            <div class="col-span-full mt-8">
+                <h2 class="section-header">מקומות לראות</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div id="than-sadet-waterfall" class="place-item p-4 rounded-xl shadow-md border border-gray-100 flex items-center space-x-2 space-x-reverse" onclick="showModal('than-sadet-waterfall')">
+                        <span class="text-2xl">🏞️</span>
+                        <span class="text-lg text-gray-800 font-semibold">Than Sadet Waterfall</span>
+                    </div>
+                    <div id="capybara-cafe" class="place-item p-4 rounded-xl shadow-md border border-gray-100 flex items-center space-x-2 space-x-reverse" onclick="showModal('capybara-cafe')">
+                        <span class="text-2xl">🦫</span>
+                        <span class="text-lg text-gray-800 font-semibold">Capybara cafe</span>
+                    </div>
+                    <div id="zen-beach" class="place-item p-4 rounded-xl shadow-md border border-gray-100 flex items-center space-x-2 space-x-reverse" onclick="showModal('zen-beach')">
+                        <span class="text-2xl">🧘</span>
+                        <span class="text-lg text-gray-800 font-semibold">Zen beach</span>
+                    </div>
+                    <div id="ko-ma-beach" class="place-item p-4 rounded-xl shadow-md border border-gray-100 flex items-center space-x-2 space-x-reverse" onclick="showModal('ko-ma-beach')">
+                        <span class="text-2xl">🏝️</span>
+                        <span class="text-lg text-gray-800 font-semibold">Ko ma beach</span>
+                    </div>
+                    <div id="zip-line" class="place-item p-4 rounded-xl shadow-md border border-gray-100 flex items-center space-x-2 space-x-reverse" onclick="showModal('zip-line')">
+                        <span class="text-2xl">🤸</span>
+                        <span class="text-lg text-gray-800 font-semibold">Zip line</span>
+                    </div>
+                    <div id="full-moon-party" class="place-item p-4 rounded-xl shadow-md border border-gray-100 flex items-center space-x-2 space-x-reverse" onclick="showModal('full-moon-party')">
+                        <span class="text-2xl">🌕</span>
+                        <span class="text-lg text-gray-800 font-semibold">Full moon party</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category: Massage and yoga -->
+            <div class="col-span-full mt-8">
+                <h2 class="section-header">עיסוי ויוגה</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div id="pure-relax" class="place-item p-4 rounded-xl shadow-md border border-gray-100 flex items-center space-x-2 space-x-reverse" onclick="showModal('pure-relax')">
+                        <span class="text-2xl">💆</span>
+                        <span class="text-lg text-gray-800 font-semibold">Pure relax</span>
+                    </div>
+                    <div id="ananda" class="place-item p-4 rounded-xl shadow-md border border-gray-100 flex items-center space-x-2 space-x-reverse" onclick="showModal('ananda')">
+                        <span class="text-2xl">🧘‍♀️</span>
+                        <span class="text-lg text-gray-800 font-semibold">Ananda</span>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Category: Services -->
+            <div class="col-span-full mt-8">
+                <h2 class="section-header">שירותים</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div id="krembo-rent" class="place-item p-4 rounded-xl shadow-md border border-gray-100 flex items-center space-x-2 space-x-reverse" onclick="showModal('krembo-rent')">
+                        <span class="text-2xl">🛵</span>
+                        <span class="text-lg text-gray-800 font-semibold">קרמבו רנט</span>
+                    </div>
+                    <div id="andobikes" class="place-item p-4 rounded-xl shadow-md border border-gray-100 flex items-center space-x-2 space-x-reverse" onclick="showModal('andobikes')">
+                        <span class="text-2xl">🏍️</span>
+                        <span class="text-lg text-gray-800 font-semibold">אנדו בייקס</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Modal for place details -->
+    <div id="place-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center p-4 z-50">
+        <div class="relative bg-white rounded-3xl p-6 md:p-8 w-full max-w-2xl shadow-2xl scale-95 opacity-0 transition-all duration-300 transform">
+            <button class="absolute top-4 left-4 p-2 rounded-full hover:bg-gray-200 transition-colors" onclick="hideModal()">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <div id="modal-content" class="text-right">
+                <!-- Content will be injected here by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const places = {
+            'balance': {
+                title: 'Balance',
+                image: 'uploaded:balance.jpeg-6166a5d9-adf3-4bc3-9cae-362f6a48214c',
+                description: 'בית קפה סטייל קפליקס בת״א. קפה טוב, אוכל טעים. נמצא ממול לקפה קפיברה, אז ממליצים לסנג׳ר את אחד מבני הזוג להכנס עם הילדים לראות קפיברות והשני יכול להתפנן בינתיים ממול בקפה טוב :)',
+                links: [
+                    { name: 'Google Maps', url: 'https://www.google.com/maps/search/Balance+Koh+Phangan' }
+                ]
+            },
+            'bubbas-roastery': {
+                title: 'Bubba’s Roastery',
+                image: 'uploaded:bubas roastry.jpeg-b43926b0-ee15-4b7f-bff5-62e74b996ec7',
+                description: 'מקום של קפה, קולים את הקפה במקום ויש חצר פנימית מתוקה. לא לפספס את קערת האסאי וטוסט האבוקדו. יש שמועות שגם המאצ׳ה שלהם ממש טעים (אנחנו לא התנסינו)',
+                links: [
+                    { name: 'Google Maps', url: 'https://www.google.com/maps/search/Bubba\'s+Roastery+Koh+Phangan' }
+                ]
+            },
+            'bubbas-ban-tai': {
+                title: 'Bubba’s Ban tai',
+                image: 'https://placehold.co/600x400/A2D2FF/333?text=Bubba\'s+Ban+tai',
+                description: 'סניף הנוסף של באבאס, ממוקם באזור באן תאי. אחלה קפה לעבוד בו (גם בסניף השני כיף לעבוד).',
+                links: [
+                    { name: 'Google Maps', url: 'https://www.google.com/maps/search/Bubba\'s+Ban+tai+Koh+Phangan' }
+                ]
+            },
+            'whats-cup': {
+                title: 'What’s cup',
+                image: 'uploaded:whats cup.jpeg-798af544-8ee3-41b4-9a19-491d84bbaf23',
+                description: 'לא לפספס - נוף מדהים של הים והאי. אוכל טעים, אחלה קפה. מקום ללכת כל המשפחה. לילדים יש פנקייקים וכל מיני מנות כיפיות',
+                links: [
+                    { name: 'Google Maps', url: 'https://www.google.com/maps/search/What\'s+cup+Koh+Phangan' }
+                ]
+            },
+            'loyfa-organic-farm': {
+                title: 'Loyfa organic farm',
+                image: 'https://placehold.co/600x400/C8F7C5/333?text=Loyfa+Organic+Farm',
+                description: 'חווה אורגנית שלווה שמגישה ארוחות בוקר בריאות וטריות, מקום ששייך לישראלים ממה שהבנו. יש שקשוקה טעימה.',
+                links: [
+                    { name: 'Google Maps', url: 'https://www.google.com/maps/search/Loyfa+organic+farm+Koh+Phangan' }
+                ]
+            },
+            'kaif': {
+                title: 'Kaif',
+                image: 'https://placehold.co/600x400/E1F2FB/333?text=Kaif',
+                description: 'בית קפה חמוד עם נוף לים. אחלה מקום להתחיל בו אם נוסעים ליום בצ׳ולוקלום.',
+                links: [
+                    { name: 'Google Maps', url: 'https://www.google.com/maps/search/Kaif+Koh+Phangan' }
+                ]
+            },
+            'seatara': {
+                title: 'Seatara',
+                image: 'uploaded:seatara.jpeg-9b59e86f-8cf7-465c-87e6-80532da2c650',
+                description: 'מסעדה ובריכה, ממש על החוף. מקום כיפי לארוחת ערב, בריכה ושקיעה. יש גם אזור של פופים על הים.',
+                links: [
+                    { name: 'Google Maps', url: 'https://www.google.com/maps/search/Seatara+Koh+Phangan' }
+                ]
+            },
+            'tomorrow-x': {
+                title: 'Tomorrow x',
+                image: 'uploaded:tommorow x.jpeg-ed40775c-a420-493e-9fdd-b9568ff9b69d',
+                description: 'מסעדה עם בריכה ונוף מהמם. מקום להעביר בו כמה שעות בכיף. יכול להיות עמוס, אז להגיע מוקדם או באמצע שבוע כדי לתפוס מקום טוב ליד הבריכה.',
+                links: [
+                    { name: 'Google Maps', url: 'https://www.google.com/maps/search/Tomorrow+x+Koh+Phangan' }
+                ]
+            },
+            'common-ground': {
+                title: 'Common ground',
+                image: 'uploaded:Common ground.jpeg-73128f79-f7b1-4f95-9e72-da35ff1e57a4',
+                description: 'בית קפה / מסעדה עם בריכה. אין נוף, אבל המקום מעוצב עם מלא צמחיה ויש אחלה אוכל (אנחנו אכלנו שם ארוחת בוקר).',
+                links: [
+                    { name: 'Google Maps', url: 'https://www.google.com/maps/search/Common+ground+Koh+Phangan' }
+                ]
+            },
+            'palita-lodge': {
+                title: 'Palita lodge',
+                image: 'https://placehold.co/600x400/F7E6C4/333?text=Palita+Lodge',
+                description: 'נמצא בהאד רין. אם מתכננים להגיע לפול מון אחלה מקום להגיע אליו בצהריים, להתפנן בבריכה, לאכול ובערב להמשיך לפול מון (ממש צמוד לשם). המקום נמצא על הים ויש רשת נגד מדוזות ככה שבטוח להכנס',
+                links: [
+                    { name: 'Google Maps', url: 'https://www.google.com/maps/search/Palita+lodge+Koh+Phangan' }
+                ]
+            },
+            'sunday-night-market': {
+                title: 'Sunday night market Chulukloum',
+                image: 'uploaded:Sunday market.jpeg-bc9cf64e-b9d4-4a61-9db2-6da22df1eeb3',
+                description: 'שוק לילה שפועל בימי ראשון באזור צ׳ולוקלום. תגיעו מוקדם (18-19) כי עמוס. בשוק של דוכני בגדים, אוכל, קינוחים מסוגים שונים וכו׳. אם תלכו לתוך הרציף תמצאו דוכני יצירה - תמורת כמה באטים תקבלו דמות מגבס או קנבס, צבעי גואש ומכחול ותוכלו לשבת לעשות יצירות.',
+                links: [
+                    { name: 'Google Maps', url: 'https://www.google.com/maps/search/Sunday+night+market+Chulukloum+Koh+Phangan' }
+                ]
+            },
+            'mamas-market': {
+                title: 'Mama’s market',
+                image: 'uploaded:Mama market.jpeg-8524b0da-36c6-4a09-8fea-349268345b51',
+                description: 'שוק לילה שפועל בכל לילה בסריטאנו, מלא דוכני אוכל. יש שניצל בחלה למי שמתגעגע לארץ וכמובן כל דבר אחר: תאילנדי, פסטות, נקניקיות, פיצות, אלכוהול ובגדול הכל מהכל.',
+                links: [
+                    { name: 'Google Maps', url: 'https://www.google.com/maps/search/Mama\'s+market+Koh+Phangan' }
+                ]
+            },
+            'pantip-market': {
+                title: 'Pantip market',
+                image: 'https://placehold.co/600x400/B2D0C5/333?text=Pantip+Market',
+                description: 'שוק שפועל כל ערב ומציע המון דוכנים של אוכל, בגדים ומזכרות. אם רוצים לסגור ארוחת ערב קלילה וזולה - זה המקום למצוא פאד תאי ב-80 באט (8 שקלים). נמצא ב-Thong Sala אזור יותר עירוני כזה. באזור של השוק יש גם חנות ״20 baht shop״ שזה סוג של הכל בדולר פוגש את מקס סטוק, בית מרקחת, מקום לתיקוני אלקטרוניקה וכו׳.',
+                links: [
+                    { name: 'Google Maps', url: 'https://www.google.com/maps/search/Pantip+market+Koh+Phangan' }
+                ]
+            },
+            'saturday-night-market': {
+                title: 'Saturday night market',
+                image: 'https://placehold.co/600x400/D0B4B4/333?text=Saturday+Night+Market',
+                description: 'שוק לילה בימי שבת ב-Thong Sala. שוק עמוס ביותר. אם להגיע, אז מוקדם! יש הכל מהכל.',
+                links: [
+                    { name: 'Google Maps', url: 'https://www.google.com/maps/search/Saturday+night+market+Koh+Phangan' }
+                ]
+            },
+            'lost-and-found': {
+                title: 'Lost and found',
+                image: 'https://placehold.co/600x400/E8D9BD/333?text=Lost+and+Found',
+                description: 'מסעדה טעימה מאוד על הים. לאוכלי הבשר - יש שם מנת צלעות חזיר מצויינת.',
+                links: [
+                    { name: 'Google Maps', url: 'https://www.google.com/maps/search/Lost+and+found+Koh+Phangan' }
+                ]
+            },
+            'grilled-fish': {
+                title: 'Grilled fish Miang',
+                image: 'https://placehold.co/600x400/B6D7A7/333?text=Grilled+Fish',
+                description: 'מסעדה שמגישה דגים במלח והם טעימים בצורה בלתי רגילה. מקום שמצד אחד רואים בו תאילנדים (שזה נדיר! כי קופנגן היא כולה תיירים ובעיקר ישראלים) ומצד שני המקום מרגיש נקי ומזמין. לא לפספס!',
+                links: [
+                    { name: 'Google Maps', url: 'https://www.google.com/maps/search/Grilled+fish+Miang+Koh+Phangan' }
+                ]
+            },
+            'plaas-restaurant': {
+                title: 'Plaa’s restaurant',
+                image: 'uploaded:plaas.jpeg-81570b9b-9ebb-44a5-bafe-8098129d2762',
+                description: 'מסעדה על ההר (צריך קצת לטפס ואולי גם קצת לחפש כדי להגיע) עם נוף מדהים! אוכל טעים - אכלנו שם דג מעולה. ממוקמת ליד מפל Than Sadet, אז כדאי לשלב ביקור בשניהם. לא לפספס, בעיקר בגלל הנוף.',
+                links: [
+                    { name: 'Google Maps', url: 'https://www.google.com/maps/search/Plaa\'s+restaurant+Koh+Phangan' }
+                ]
+            },
+            'pum-pui': {
+                title: 'Pum pui',
+                image: 'https://placehold.co/600x400/C1E2FF/333?text=Pum+Pui',
+                description: 'מסעדה תאילנדית קלאסית עם מנות מוכרות וטעימות. מקום מצוין לאכול בו צהריים או ערב',
+                links: [
+                    { name: 'Google Maps', url: 'https://www.google.com/maps/search/Pum+pui+Koh+Phangan' }
+                ]
+            },
+            'umami-restaurant': {
+                title: 'Umami restaurant',
+                image: 'https://placehold.co/600x400/E3A9A9/333?text=Umami+Restaurant',
+                description: 'מסעדה יפנית איכותית. סושי בלי חשש קלקול קיבה (לפחות ממה שאנחנו התרשמנו). מקום שמרגיש רמה מעל רוב המסעדות באי.',
+                links: [
+                    { name: 'Google Maps', url: 'https://www.google.com/maps/search/Umami+restaurant+Koh+Phangan' }
+                ]
+            },
+            'coco-loco': {
+                title: 'Coco loco',
+                image: 'uploaded:coco loco.jpeg-2499de19-bb5e-4db3-8edd-8703e9a52012',
+                description: 'בר ומסעדה על החוף שמושלם לשקיעה. אווירת חופש תיירותית (מלא מסעדות אחת אחרי השניה בחוף) אבל בקטע טוב... ליד יש נדנדות חוף ומלא אנשים שבאים לשבת, לשחק על החוף. כל המסעדות באזור נראות חמודות בסה״כ.',
+                links: [
+                    { name: 'Google Maps', url: 'https://www.google.com/maps/search/Coco+loco+Koh+Phangan' }
+                ]
+            },
+            'cucina-italiana': {
+                title: 'Cucina Italiana',
+                image: 'https://placehold.co/600x400/D4E0F0/333?text=Cucina+Italiana',
+                description: 'מסעדה איטלקית אותנטית עם פיצות ופסטות שמכינים במקום. מוגבהת קצת מעל הים. כדאי להזמין מקום מראש ולבקש קו ראשון לחוף. אפשר לשלב ביחד עם שוק הלילה בראשון.',
+                links: [
+                    { name: 'Google Maps', url: 'https://www.google.com/maps/search/Cucina+Italiana+Koh+Phangan' }
+                ]
+            },
+            'than-sadet-waterfall': {
+                title: 'Than Sadet Waterfall',
+                image: 'https://placehold.co/600x400/C1C9F4/333?text=Than+Sadet+Waterfall',
+                description: 'עשר דקות הליכה ואיזה 100 באט תשלום כניסה ואתם במפל מקסים. שווה לבדוק לפני בביקורות עדכניות בגוגל מפות שאכן יש מים במפל. לבוא עם בגדי ים כמובן כי ממש כיף להכנס. בהמשך יש עוד נקודות מים אבל אנחנו לא המשכנו. שווה לשלב עם מסעדת plaa\'s.',
+                links: [
+                    { name: 'Google Maps', url: 'https://www.google.com/maps/search/Than+Sadet+Waterfall+Koh+Phangan' }
+                ]
+            },
+            'capybara-cafe': {
+                title: 'Capybara cafe',
+                image: 'uploaded:capibara cafe.jpg-73da3da2-da51-4464-8ba3-5f328fe15f6c',
+                description: 'אטרקציה לילדים. משלמים הרבה כסף ונכנסים לראות קפיברות, סוריקטות וצבים. מקום חמוד לילדים. קשה לקרוא לזה בית קפה כי הקפה גרוע ממש וגם האוכל לא נראה לנו משהו (לא ניסינו). אנחנו לא אוהבים מקומות של חיות אבל זה היה יחסית בסדר מבחינת איך שהרגיש שמטפלים בחיות. נמצא ממול לקפה באלנס אז אפשר לשלב.',
+                links: [
+                    { name: 'Google Maps', url: 'https://www.google.com/maps/search/Capybara+cafe+Koh+Phangan' }
+                ]
+            },
+            'zen-beach': {
+                title: 'Zen beach',
+                image: 'uploaded:Zen beach.jpeg-bdac57db-8686-44c8-8402-0625e3cf5122',
+                description: 'חוף של צעירים :) קצת לפני שקיעה הוא מתמלא, יש מוזיקה, בר, דוכן אוכל קטן, סוכת מסאזים על החוף. אם אתם בעניין, לכו קצת צפונה ותגיעו לחוף נודיסטים. בשישי בערב יש קבלת שבת ישראלית. שקיעות ממש יפות.',
+                links: [
+                    { name: 'Google Maps', url: 'https://www.google.com/maps/search/Zen+beach+Koh+Phangan' }
+                ]
+            },
+            'ko-ma-beach': {
+                title: 'Ko ma beach',
+                image: 'https://placehold.co/600x400/B8E0CB/333?text=Ko+Ma+Beach',
+                description: 'חוף עם אי קטן שמחובר אליו על ידי שביל חול שמופיע בשעות השפל. ההליכה שמשית אז לבוא מצוידים לשמש. נוף יפה, אפשר גם לעשות שנורקלים. שימו לב שהמים רדודים ויש די הרבה קיפודי ים אז להיזהר ולשים לב איפה נעמדים במים.',
+                links: [
+                    { name: 'Google Maps', url: 'https://www.google.com/maps/search/Ko+ma+beach+Koh+Phangan' }
+                ]
+            },
+            'zip-line': {
+                title: 'Zip line',
+                image: 'uploaded:zipline.jpg-d5e6a78b-3a81-4268-aee2-491b8eb6f243',
+                description: 'אטרקציה כיפית לילדים (וגם למבוגרים). כמה מסלולי אומגה שונים ביערות הגשם של האי. לא צריך להזמין מקום מראש, פשוט להגיע. לבוא עם נעליים סגורות. הם מרשים לילדים (במשקל מתאים) לעשות יחד עם ההורה שזה נחמד לקטנטנים :)',
+                links: [
+                    { name: 'Google Maps', url: 'https://www.google.com/maps/search/Zip+line+Koh+Phangan' }
+                ]
+            },
+            'full-moon-party': {
+                title: 'Full moon party in Haad Rin',
+                image: 'uploaded:full moon.jpeg-6947231e-7bff-4cd9-ab5e-abf52ff54f5b',
+                description: 'להתעדכן על התאריך עם המקומיים ולהגיע מוקדם (אפשר להתמקם לפני בפליטה לודג׳ וככה לראות את ההכנות ולהחליט מתי רוצים ללכת לכיוון המסיבה). בהתחלה כל האירוע מאוד מותאם לילדים, קעקועים זוהרים בחושך, מופעי אש, מוסיקה, דוכני אוכל וכו׳. בשלב מסוים נהיה די עמוס. חוויה לילדים, ממליצים ללכת אם יוצא.',
+                links: [
+                    { name: 'Google Maps', url: 'https://www.google.com/maps/search/Full+moon+party+Haad+Rin' }
+                ]
+            },
+            'pure-relax': {
+                title: 'Pure relax',
+                image: 'https://placehold.co/600x400/C4E0D0/333?text=Pure+Relax',
+                description: 'מקום מושלם למסאזים. נקי, נעים, מקצועי. מומלץ בחום!',
+                links: [
+                    { name: 'Google Maps', url: 'https://maps.app.goo.gl/7wXVT95xSWSP2oeA6' }
+                ]
+            },
+            'ananda': {
+                title: 'Ananda',
+                image: 'https://placehold.co/600x400/D0D6F0/333?text=Ananda',
+                description: 'מקום חמוד שעשינו בו קצת יוגה. יש המון מקומות ליוגה באי. יצא לנו לדגום רק את זה, והיה חמוד מאוד.',
+                links: [
+                    { name: 'Google Maps', url: 'https://www.google.com/maps/search/Ananda+yoga+Koh+Phangan' }
+                ]
+            },
+            'krembo-rent': {
+                title: 'קרמבו רנט',
+                image: 'https://placehold.co/600x400/F0E68C/333?text=Krembo+Rent',
+                description: 'אחלה מקום להשכרת רכב. זמינים בווטס אפ לכל דבר, הוגנים ומקצועיים.',
+                links: [
+                    { name: 'אתר', url: 'https://kremborentkp.com' }
+                ]
+            },
+            'andobikes': {
+                title: 'אנדו בייקס',
+                image: 'https://placehold.co/600x400/DDA0DD/333?text=Ando+Bikes',
+                description: 'מקום נחמד להשכרת אופנועים. הכי כיף באי עם אופנוע. אבל לקחת רק לחלק מהזמן אם מסתדר. זה לגמרי חלק מחוויית האי.',
+                links: [
+                    { name: 'מספר טלפון', url: 'tel:+66803396683' }
+                ]
+            }
+        };
+
+        const modal = document.getElementById('place-modal');
+        const modalContent = document.getElementById('modal-content');
+
+        function showModal(placeId) {
+            const place = places[placeId];
+            if (!place) return;
+
+            // Generate HTML for links
+            let linksHtml = '';
+            place.links.forEach(link => {
+                linksHtml += `<a href="${link.url}" target="_blank" class="block w-full text-center py-2 px-4 border border-indigo-500 rounded-full text-indigo-500 hover:bg-indigo-500 hover:text-white transition-colors">
+                    ${link.name}
+                </a>`;
+            });
+
+            // Set modal content
+            modalContent.innerHTML = `
+                <img src="${place.image.startsWith('uploaded:') ? place.image : place.image}" alt="" class="rounded-xl shadow-lg mb-4 w-full h-auto">
+                <h2 class="text-3xl font-bold mb-2 text-indigo-800">${place.title}</h2>
+                <p class="text-lg text-gray-700 mb-6">${place.description}</p>
+                <div class="flex flex-col space-y-3">
+                    ${linksHtml}
+                </div>
+            `;
+            
+            // Show modal with animation
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            setTimeout(() => {
+                modal.firstElementChild.classList.remove('scale-95', 'opacity-0');
+                modal.firstElementChild.classList.add('scale-100', 'opacity-100');
+            }, 10);
+        }
+
+        function hideModal() {
+            // Hide modal with animation
+            modal.firstElementChild.classList.remove('scale-100', 'opacity-100');
+            modal.firstElementChild.classList.add('scale-95', 'opacity-0');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            }, 300);
+        }
+
+        // Close modal when clicking outside
+        modal.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                hideModal();
+            }
+        });
+    </script>
+</body>
+</html>
